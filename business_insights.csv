@@ -1,0 +1,8 @@
+Insight,Recommendation
+Identify high-risk customers,Target customers with churn probability >= 70%
+Provide personalized discounts,Offer personalized discounts and loyalty rewards
+Improve customer support,Provide proactive support to high-risk customers
+Monitor medium-risk customers,Monitor customers with 40%-69% churn probability
+Increase customer engagement,Use personalized communication and offers
+Run targeted retention campaigns,Create targeted customer retention campaigns
+Monitor churn regularly,Run the churn model periodically

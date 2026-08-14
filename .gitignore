@@ -1,0 +1,17 @@
+# Large generated files
+outputs/test_predictions_input.csv
+outputs/shap_values.csv
+models/final_churn_model.pkl
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.venv/
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
