@@ -42,7 +42,7 @@ df["Churn"] = df["Churn"].map({
 id_column = None
 
 for column in df.columns:
-    if column.lower() in ["customerid", "customer_id", "customer id"]:
+   if column.lower() in ["customerid", "customer_id", "customer id", "customers"]:
         id_column = column
         break
 
