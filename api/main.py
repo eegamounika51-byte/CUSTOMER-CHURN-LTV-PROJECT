@@ -1,8 +1,6 @@
 from fastapi import FastAPI
-from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 from typing import List
-
 
 app = FastAPI(
     title="Customer Churn & LTV Prediction API",
@@ -36,14 +34,11 @@ def predict_customer(customer):
     }
 
 
-# Single customer
 @app.post("/predict")
 def predict_churn(customer: CustomerData):
-
     return predict_customer(customer)
 
 
-# Batch customers
 @app.post("/batch_predict")
 def batch_predict(customers: List[CustomerData]):
 
@@ -66,12 +61,6 @@ def batch_predict(customers: List[CustomerData]):
 
 @app.get("/")
 def home():
-    @app.get("/dashboard")
-def dashboard():
-    return RedirectResponse(
-        url="http://localhost:3000/dashboard/2-customer-churn-and-ltv-dashboard?tab=33-churn-%26-ltv-overview"
-    )
-
     return {
         "message": "Customer Churn & LTV API is running",
         "status": "success"
@@ -80,7 +69,6 @@ def dashboard():
 
 @app.get("/health")
 def health():
-
     return {
         "status": "healthy"
     }
