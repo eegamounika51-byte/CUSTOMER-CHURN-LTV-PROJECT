@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
 from typing import List
 
@@ -65,6 +66,11 @@ def batch_predict(customers: List[CustomerData]):
 
 @app.get("/")
 def home():
+    @app.get("/dashboard")
+def dashboard():
+    return RedirectResponse(
+        url="http://localhost:3000/dashboard/2-customer-churn-and-ltv-dashboard?tab=33-churn-%26-ltv-overview"
+    )
 
     return {
         "message": "Customer Churn & LTV API is running",
